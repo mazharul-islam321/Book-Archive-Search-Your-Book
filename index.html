@@ -9,11 +9,45 @@
     <!-- bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h2>Book-Archive</h2>
+    <main class="container">
+        <!-- book archive heading -->
+        <h2 class="text-center text-warning my-4 header-text">BOOK-ARCHIVE</h2>
 
+        <!--  book search section -->
+        <section>
+            <div class="input-group my-3 w-50 mx-auto">
+                <input id="search-field" type="text" class="form-control border-warning" placeholder="search your book"
+                    aria-label="search you book" aria-describedby="button-addon2">
+                <button onclick="searchBook()" class="btn btn-outline-warning" type="button"
+                    id="button-search">search</button>
+            </div>
+        </section>
+
+        <!-- display error  -->
+        <section class="text-center">
+            <p id="total-book"></p>
+        </section>
+
+        <!-- display spinner -->
+        <section class="text-center">
+            <div class="lds-ripple" id="spinner">
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+
+        <!-- display search result -->
+        <section class="container">
+            <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4 my-5">
+            </div>
+        </section>
+
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
